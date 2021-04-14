@@ -173,6 +173,16 @@ namespace BlackJack.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap background_min {
+            get {
+                object obj = ResourceManager.GetObject("background_min", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap J {
             get {
                 object obj = ResourceManager.GetObject("J", resourceCulture);
