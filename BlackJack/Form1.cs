@@ -51,7 +51,7 @@ namespace BlackJack
 
         }
 
-        public void Jogada(PictureBox A, int jogador)
+        public void Joga(PictureBox A, int jogador)
         {
             int x, total_pontos=0;
             Random sorteio = new Random();
@@ -60,19 +60,19 @@ namespace BlackJack
 
             switch (x)
             {
-                case 1:     A.Image = Properties.Resources.a;    total_pontos += 1;     break;
-                case 2:     A.Image = Properties.Resources._2;   total_pontos += 2;     break;
-                case 3:     A.Image = Properties.Resources._3;   total_pontos += 3;     break;
-                case 4:     A.Image = Properties.Resources._4;   total_pontos += 4;     break;
-                case 5:     A.Image = Properties.Resources._5;   total_pontos += 5;     break;
-                case 6:     A.Image = Properties.Resources._6;   total_pontos += 6;     break;
-                case 7:     A.Image = Properties.Resources._7;   total_pontos += 7;     break;
-                case 8:     A.Image = Properties.Resources._8;   total_pontos += 8;     break;
-                case 9:     A.Image = Properties.Resources._9;   total_pontos += 9;     break;
-                case 10:    A.Image = Properties.Resources._10;  total_pontos += 10;    break;
-                case 11:    A.Image = Properties.Resources.J;    total_pontos += 11;    break;
-                case 12:    A.Image = Properties.Resources.Q;    total_pontos += 12;    break;
-                case 13:    A.Image = Properties.Resources.K;    total_pontos += 13;    break;
+                case 1:     A.Image = Properties.Resources.a;    pontos += 1;     break;
+                case 2:     A.Image = Properties.Resources._2;   pontos += 2;     break;
+                case 3:     A.Image = Properties.Resources._3;   pontos += 3;     break;
+                case 4:     A.Image = Properties.Resources._4;   pontos += 4;     break;
+                case 5:     A.Image = Properties.Resources._5;   pontos += 5;     break;
+                case 6:     A.Image = Properties.Resources._6;   pontos += 6;     break;
+                case 7:     A.Image = Properties.Resources._7;   pontos += 7;     break;
+                case 8:     A.Image = Properties.Resources._8;   pontos += 8;     break;
+                case 9:     A.Image = Properties.Resources._9;   pontos += 9;     break;
+                case 10:    A.Image = Properties.Resources._10;  pontos += 10;    break;
+                case 11:    A.Image = Properties.Resources.J;    pontos += 11;    break;
+                case 12:    A.Image = Properties.Resources.Q;    pontos += 12;    break;
+                case 13:    A.Image = Properties.Resources.K;    pontos += 13;    break;
             }
 
             if (jogador == 1)
@@ -85,7 +85,7 @@ namespace BlackJack
         {
             
 
-            Jogada(pictureBox1, 1);
+            Joga(pictureBox1, 1);
            
 
             if(pontos_A <= 21)
@@ -130,6 +130,13 @@ namespace BlackJack
             pictureBox2.Image = Properties.Resources._0;
 
         }
+        private void btn_parar_2_Click(object sender, EventArgs e)
+        {
+            btn_jogar_2.Enabled = false;
+            btn_parar_2.Enabled = false;
+            btn_reiniciar.Enabled = true;
+            resultado();
+        }
 
         private void btn_jogar_2_Click(object sender, EventArgs e)
         {
@@ -171,13 +178,7 @@ namespace BlackJack
             btn_parar_2.Enabled = true;
         }
 
-        private void btn_parar_2_Click(object sender, EventArgs e)
-        {
-            btn_jogar_2.Enabled = false;
-            btn_parar_2.Enabled = false;
-            btn_reiniciar.Enabled = true;
-            resultado();
-        }
+        
     }
 
 
